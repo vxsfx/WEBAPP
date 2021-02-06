@@ -1,5 +1,5 @@
 body{font-size:100%;}
-
+	
 ul {
   list-style-type: none;
   overflow: hidden;
@@ -14,19 +14,6 @@ li a{
 }
 	
 li a:hover {background-color:black;}
-
-.sign{position:absolute;
-	right: 20%;
-	font-size:4vw;
-	}
-	.LogoNav{position:absolute;
-	left: 20%;
-	font-size:4vw;
-	}
-	.Profile{position:absolute;
-	right: 35%;
-	font-size:4vw;
-	}
 
 .TextSize{
 	font-size:8vw;
@@ -48,7 +35,18 @@ background-image: url("Trees.PNG");
 background-repeat: no-repeat;
 background-size: 100% 100%;
 }
-
+.sign{position:absolute;
+right: 20%;
+font-size:4vw;
+}
+.LogoNav{position:absolute;
+left: 20%;
+font-size:4vw;
+}
+.Profile{position:absolute;
+right: 35%;
+font-size:4vw;
+}
 .Backdrop{
 margin-left:20%;
 margin-right:20%;
@@ -84,30 +82,25 @@ margin-bottom:2%;
 	height:20%;
 	background-color:blue;
 	overflow: hidden;
-	border-radius: 10%;
 }
 
 .Uptext{
 	text-align: center;
-	left:5%;
-	top:5%;
 	position: absolute;
+	left: 50%;
+	top: 50%;
 	}	
 .UpPrev, .UpNext{
 	cursor: pointer;
     position: absolute;
-    top:40%;
+    top:50%;
 	width:auto;
-	background-color:rgba(140,140,140,0.2);
-	border-radius: 10%;
-	font-size: 175%;
-
 }
 .UpNext{ 
-	right:1.5%;
+	right:10%;
     }
 .UpPrev{
-    left:1.5%;
+    left:10%;
     }
 .UpSlide{
 	display:none;
@@ -118,19 +111,18 @@ margin-bottom:2%;
 	display:block;
 	margin-left:25%;
 	margin-right:25%;
-	top:2.5%;
 	width:50%;
 	height:20%;
 	background-color:gray;
 	overflow: hidden;
 	position: relative;
-	border-radius: 10%;
 	}
 		
 .newtext{
 	text-align: center;
 	position: absolute;
 	left: 50%;
+	top: 80%;
 	}		
 
 .NewPrev, .NewNext{
@@ -149,36 +141,3 @@ margin-bottom:2%;
 	display:none;
 	width:50%;
 	}
-.infobox{
-	background-color:rgb(0, 0, 0);
-	display: block;
-	position:absolute;
-	top:10%;
-	height:80%;
-	width:25%;
-	border-radius: 15%;
-}
-
-.Form{
-	font-size: 100%;
-}
-#FormContainer{
-	display:none;
-	background-color: aqua;
-	position: absolute;
-	left:25%;
-	width:50%;
-	height:10%;
-}
-#NewContainer{
-	display:none;
-	background-color: brown;
-	position: absolute;
-	left:25%;
-}
-#one{
-	width:50%;
-	position: absolute;
-	left:25%;
-	display:block;
-}

@@ -11,91 +11,27 @@
 </div>
 <div class="RIGHT">
 </div>
+
 		<div class="TextSize">
 		<!--NAV BAR+LOG IN-->
 		<ul>
 		<!--logo,,setingsymbol,,signin=use images-->
 			<li><a class="LogoNav" href="GameScreen.html">RPG</a></li>
 			<li><a class="Profile" href="">acountoptions</a></li>
-			<li><a class="sign" onclick="formOpen()">sign in</a></li>
+			<li><a class="sign" href="">SIGN IN</a></li>
 		</ul>
-		</div> 
-<!--form for login-->
-<div id="FormContainer">
-	<form>
-		<label for="User">Username</label>	
-		<input type="text" id="User">
-		<label for="pass">password</label>
-		<input type="text" id="pass">
-		<buton onclick="formClose()">cancel</buton>
-		<a>submit</a>
-		<a onclick="NewUser()">Create New</a>
-	</form>
-</div>
-<!-- form for creation (from login-"Create New")-->
-<div id="NewContainer">
-	<form>
-		<label for="newUser">Username</label>
-		<input id="newUser">
-		<label for="newEmail">Email</label>
-		<input id="newEmail">
-		<label for="newPassword">Password</label>
-		<input id="newPassword">
-		<label for="newAge">Birthday</label>
-		<input id="newAge">
-		<a>create</a>
-		<a onclick="formClose()">cancel</a>
-	</form>
+		</div>
 
-
-</div>
-
-
-
-
-
-<!--script for form buttons-->
-<script>
-	var form = document.getElementById("FormContainer");
-	var newform = document.getElementById("NewContainer"); 
-	function NewUser(){
-		newform.style.display="block";
-		form.style.display="none";
-	}
-	function formOpen(){
-		form.style.display="block";
-		newform.style.display="none";
-	}
-	function formClose(){
-		form.style.display="none";
-		newform.style.display="none";
-	}
-</script>
-
-
-
-
-
-<!--title screen at top (below navBar)-->
 <div class = "Backdrop">
 <div class = "Title">
 </div>
 <div class = "Play">
 </div>
 </div>
-<!--Updates info/log slideshow-->
+
 <div class="Updates">
 	<div class="UpSlide">
-		<div class="infobox" style="left:6%;">
-		<a class="Uptext" href="Info.html">1ad23</a>
-		</div>
-		<div class="infobox" style="left:38%;">
-		<a class="Uptext" href="Info.html">456</a>
-		</div>
-		<div class="infobox" style="right:6%;">
-		<a class="Uptext" href="Info.html">789</a>
-		</div>
-		
+		<a class="Uptext" href="Info.html">A</a>
 	</div>
 	<div class="UpSlide">
 		<a class="Uptext" href="Info.html">B</a>
@@ -106,7 +42,6 @@
 	<a class="UpPrev" onclick="UpSlide(-1)">&#10094;</a>
 	<a class="UpNext" onclick="UpSlide(1)">&#10095;</a>
 </div>
-<!--script for update slideshow-->
 <script>
 	var slides2 = 1;
 	showSlide2(slides2);
@@ -122,7 +57,6 @@
 		}
 </script>
 
-<!--news slideshow-->
 <div class="News">
 	<div class="NewSlide">
 		<a class="newtext" href="Info.html">1</a>
@@ -136,7 +70,6 @@
 	<a class="NewPrev" onclick="NewSlide(-1)">&#10094;</a>
 	<a class="NewNext" onclick="NewSlide(1)">&#10095;</a>
 </div>
-<!--script for news slideshow-->
 <script>
 	var slides = 1;
 	showSlide(slides);
@@ -151,10 +84,6 @@
 		slide[slides - 1].style.display="block";
 	}
 </script>
-
-
-
-
 
 </body>
 
