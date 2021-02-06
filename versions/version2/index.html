@@ -1,0 +1,108 @@
+<HTML>
+	<head>
+		<title>
+		RPG
+		</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+<body>
+
+<!--sidebannerimage-->
+<div class="LEFT">
+</div>
+<div class="RIGHT">
+</div>
+
+
+<div class="TextSize">
+<!--NAV BAR+LOG IN-->
+	<ul>
+	<!--logo,,setingsymbol,,signin=use images-->
+		<li><a class="LogoNav" onclick="form.Open()">RPG</a></li>
+		<li><a class="Profile" onclick="form.Open()">account</a></li>
+		<li><a class="Sign" onclick="form.Open()">sign in</a></li>
+	</ul>
+</div>
+
+
+<div id="FormContainer">
+	<form action="enter.php" method="post">
+		Username: <input type="text" name="Username" required><br>
+		Password: <input type="text" name="Password" required><br>
+		<input type="submit"/>
+	</form>
+	<a onclick="form.Close()"><input type="button" value="cancel"></a>
+	<a onclick="form.NewUser()"><input type="button" value="signup"></a>
+</div>
+
+
+<div id="NewContainer">
+	<form action="create.php" method="post">
+		Username: <input type="text" name="Username" required><br>
+		Email: <input type="text" name="Email" required><br>
+		Password: <input type="text" name="Password" required><br>
+		Date Of Birth<input type="date" name="DOB" required><br>
+		<input type="submit">
+		<a onclick="form.Close()"><input type="button" value="cancel"></a>
+		<a onclick="form.Open()"><input type="button" value="login"></a>
+	</form>
+</div>
+
+
+<div class = "Backdrop">
+	<div class = "Title">
+	</div>
+	<div class = "Play">
+	</div>
+</div>
+
+
+<div class="Updates">
+	<div class="UpSlide">
+		<div class="infobox" style="left:6%;">
+			<a class="Uptext" href="Info.html">1ad23</a>
+		</div>
+		<div class="infobox" style="left:38%;">
+			<a class="Uptext" href="Info.html">456</a>
+		</div>
+		<div class="infobox" style="right:6%;">
+			<a class="Uptext" href="Info.html">789</a>
+		</div>		
+	</div>
+
+	<div class="UpSlide">
+		<a class="Uptext" href="Info.html">B</a>
+	</div>
+	<div class="UpSlide">
+		<a class="Uptext" href="Info.html">C</a>
+	</div>
+	<a class="UpPrev" onclick="upSlider.changeSlide(-1)">&#10094;</a>
+	<a class="UpNext" onclick="upSlider.changeSlide(1)">&#10095;</a>
+</div>
+
+
+<div class="News">
+	<div class="NewSlide">
+							<!--page.html,,id to go to-->
+		<a class="newtext" href="info.html#123">123test</a>
+	</div>
+	<div class="NewSlide">
+		<a class="newtext" href="Info.html#456">abc</a>
+	</div>
+	<div class="NewSlide">
+		<a class="newtext" href="Info.html">456</a>
+	</div>
+	<a class="NewPrev" onclick="newSlider.changeSlide(-1)">&#10094;</a>
+	<a class="NewNext" onclick="newSlider.changeSlide(1)">&#10095;</a>
+</div>
+
+
+<script src="./scripts/script.js"></script>
+<script>
+	var newSlider = new slider("NewSlide")
+	var upSlider = new slider("UpSlide") 
+	var form = new loginForm() 
+</script>
+
+</body>
+</HTML>
