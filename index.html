@@ -6,8 +6,16 @@
 </head>
 <body>
 
-<iframe src="./website/pages/index.html" width="200" height="100">
+<iframe id="indexframe" src="./website/pages/index.html" width="200" height="100">
 </iframe>
+
+
+<script>
+    iframedoc = document.getElementById("indexframe").contentDocument;
+    iframedoc.getElementById("FormContainer").remove();
+    iframedoc.getElementById("NewContainer").remove();
+</script>
+
 
 </body>
 </html>
