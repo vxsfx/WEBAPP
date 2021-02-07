@@ -14,9 +14,13 @@
     window.onload = function() {
         iframedoc = document.getElementById("indexframe").contentDocument;
         console.log(iframedoc);
-        var form = iframedoc.getElementById("FormContainer");
-        form.remove()
+        iframedoc.getElementById("FormContainer").remove();
         iframedoc.getElementById("NewContainer").remove();
+
+        iframedoc.querySelectorAll("a").foreach(b=>b.removeAttribute("href"))
+
+
+
     }
 </script>
 
