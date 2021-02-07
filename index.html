@@ -11,10 +11,13 @@
 <p>sadasda</p>
 
 <script>
-    iframedoc = document.getElementById("indexframe").contentDocument;
-    console.log(iframedoc);
-    iframedoc.getElementById("FormContainer").remove();
-    iframedoc.getElementById("NewContainer").remove();
+    window.onload = function() {
+        iframedoc = document.getElementById("indexframe").contentDocument;
+        console.log(iframedoc);
+        var form = iframedoc.getElementById("FormContainer");
+        form.remove()
+        iframedoc.getElementById("NewContainer").remove();
+    }
 </script>
 
 
