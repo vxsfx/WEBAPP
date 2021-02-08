@@ -6,22 +6,24 @@
 </head>
 <body>
 
-<iframe id="indexframe" src="./website/pages/index.html" width="1000" height="1000">
+<iframe id="indexframe" src="./website/pages/index.html" onload="remo()" width="1000" height="1000">
 </iframe>
 <p>sadasda</p>
 
 <script>
     window.onload = function() {
+        remo()
+    }
+    function remo(){
         iframedoc = document.getElementById("indexframe").contentDocument;
         console.log(iframedoc);
         iframedoc.getElementById("FormContainer").remove();
         iframedoc.getElementById("NewContainer").remove();
-
-//        iframedoc.querySelectorAll("a").forEach(b=>b.removeAttribute("href"));
-
-
+        iframedoc.querySelectorAll("a").forEach(b=>b.removeAttribute("href"));
 
     }
+
+
 </script>
 
 
