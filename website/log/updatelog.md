@@ -1,7 +1,8 @@
  # Title
- ignore me plz
+ ignore me plz:
  
-![Image alt text](../images/trees.png)
+![Imagtext](../images/trees.png)
+
  *  content
  *  content2
     *  content3
