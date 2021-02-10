@@ -1,7 +1,7 @@
  # Title
  ignore me plz:
  
-![Imagtext](../images/trees.png)
+![Imagtext](../images/Trees.png)
 
  *  content
  *  content2
