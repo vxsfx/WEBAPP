@@ -26,6 +26,7 @@ class idlog{
     for (line of lines){
       if (line.startsWith(" #")){
         id++
+        var ulEl=null;
         var element = document.createElement("h")
         //element.class="newsheader"
         var node = document.createTextNode(line.split("#")[1])
@@ -35,20 +36,34 @@ class idlog{
         parent.appendChild(element)
       }
       if (id > 0){
-        var prevelement;
         var compline = line.slice(0,6)
-        
-        console.log(compline)
+        var content = line.slice(6,-1)
+        var ulEl;
+        var inulEl;
         switch(true){
-          case /.1..../.test(compline):
-            console.log("howdy")
+          case /.\*..../.test(compline):
             //create new list element
+            inulEl = null;
+            if (ulEl==null){
+              ulEl = document.createElement("ul")
+              parent.appendChild(ulEl)
+            }
+            var listEl = document.createElement("li")
+            listEl.append(line)
+            ulEl.appendChild(listEl)
+            console.log(ulEl)
             break;
-          case /.....1/.test(compline):
-            console.log("well howdy")
-            //element parent prev list
+          case /....\*/.test(compline):
+            if (inulEl==null){
+              inulEl = document.createElement("ul")
+              ulEl.appendChild(inulEl)
+            }
+            //console.log(listEl)
+            var inlistEl = document.createElement("li")
+            inlistEl.append(line)
+            inulEl.appendChild(inlistEl)
             break;
-       }
+        }
       }
     }
   }

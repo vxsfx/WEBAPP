@@ -4,9 +4,10 @@ styles used by all/almost all pages(eg navbar, banners, maybe forms)
 body{font-size:100%;}
 
 #NavBar{
+    z-index:1;
     width:60%;
     height:4vw;
-    position:absolute;
+    position:relative;
     top:0%;
     left:20%;
     display: block;
@@ -46,6 +47,7 @@ body{font-size:100%;}
 }
 
 #FormContainer{
+    z-index: 1;
     display:none;
     background-color: aqua;
     position: absolute;
@@ -54,6 +56,7 @@ body{font-size:100%;}
     height:10%;
 }
 #NewContainer{
+    z-index:1;
     display:none;
     background-color: brown;
     position: absolute;
@@ -62,7 +65,7 @@ body{font-size:100%;}
 
 
 .left{
-    position:absolute;
+    position:fixed;
     top:0%;
     left:0px;
     height:100%;
@@ -73,7 +76,7 @@ body{font-size:100%;}
     background-size: 100% 100%;
 }
 .right{
-    position:absolute;
+    position:fixed;
     top:0%;
     right:0px;
     height:100%;
