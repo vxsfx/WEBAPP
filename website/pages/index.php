@@ -7,7 +7,8 @@ session_start();
 		<title>
         RPG
 		</title>
-		<link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/parent.css">
+		<link rel="stylesheet" href="../styles/index.css">
 	</head>
 <body>
 
@@ -19,13 +20,13 @@ session_start();
 
 
         <!--need make NAV scale like rest of elements-->
-		<div class="TextSize">
+		<div id="NavBar">
 		<!--NAV BAR+LOG IN-->
-		<ul>
+		<ul id="Nav">
         <!--logo,,setingsymbol,,signin=use images-->
-			<li><a class="LogoNav" href="./game/Game.php">RPG</a></li>
-			<li><a class="Profile" href="">account</a></li>
-			<li><a class="Sign" href="./account/logout.php">Logout</a></li>
+			<li><a id="gameNav" href="./game/Game.php">RPG</a></li>
+			<li><a id="accountNav" href="">account</a></li>
+			<li><a id="loginNav" href="./account/logout.php">Logout</a></li>
         </ul>
         </div>
 
@@ -43,49 +44,51 @@ session_start();
 </div>
 
 
-<div class="Updates">
-	<div class="UpSlide">
+<div class="News">
+	<div class="Slide UpdateSlide">
 		<div class="infobox" style="left:6%;">
-			<a class="Uptext" href="./info/Info.php">1ad23</a>
+			<a class="NewsText" id="1" href="./info/info.php#1">iframetestlink</a>
 		</div>
 		<div class="infobox" style="left:38%;">
-			<a class="Uptext" href="./info/Info.php">456</a>
+			<a class="NewsText" id="2" href="./info/info.php">456</a>
 		</div>
 		<div class="infobox" style="right:6%;">
-			<a class="Uptext" href="./info/Info.php">789</a>
-		</div>
+			<a class="NewsText" id="3" href="./info/info.php">789</a>
+		</div>		
 	</div>
 
-	<div class="UpSlide">
-		<a class="Uptext" href="./info/Info.php">B</a>
+	<div class="Slide UpdateSlide">
+		<a class="NewsText" href="./info/info.php">B</a>
 	</div>
-	<div class="UpSlide">
-		<a class="Uptext" href="./info/Info.php">C</a>
+	<div class="Slide UpdateSlide">
+		<a class="NewText" href="./info/info.php">C</a>
 	</div>
-	<a class="UpPrev" onclick="upSlider.changeSlide(-1)">&#10094;</a>
-	<a class="UpNext" onclick="upSlider.changeSlide(1)">&#10095;</a>
+	<a class="Prev" style="left:1.5%;" onclick="upSlider.changeSlide(-1)">&#10094;</a>
+	<a class="Next" style="right:1.5%;"  onclick="upSlider.changeSlide(1)">&#10095;</a>
 </div>
 
 
 <div class="News">
-	<div class="NewSlide">
-		<a class="newtext" href="./info/Info.php">1</a>
+	<div class="Slide NewsSlide">
+							<!--page.html,,id to go to-->
+		<a class="NewsText" href="./info/info.php#123">123test</a>
 	</div>
-	<div class="NewSlide">
-		<a class="newtext" href="./info/Info.php">2</a>
+	<div class="Slide NewsSlide">
+		<a class="NewsText" href="./info/info.php#456">abc</a>
 	</div>
-	<div class="NewSlide">
-		<a class="newtext" href="./info/Info.php">3</a>
+	<div class="Slide NewsSlide">
+		<a class="NewsText" href="./info/info.php">456</a>
 	</div>
-	<a class="NewPrev" onclick="newSlider.changeSlide(-1)">&#10094;</a>
-	<a class="NewNext" onclick="newSlider.changeSlide(1)">&#10095;</a>
+	<a class="Prev" style="left:1.5%;" onclick="newSlider.changeSlide(-1)">&#10094;</a>
+	<a class="Next" style="right:1.5%;" onclick="newSlider.changeSlide(1)">&#10095;</a>
 </div>
+
 
 
 <script src="../scripts/script.js"></script>
 <script>
-	var newSlider = new slider("NewSlide")
-	var upSlider = new slider("UpSlide") 
+	var newSlider = new slider("NewsSlide")
+	var upSlider = new slider("UpdateSlide") 
 </script>
 
 </body>

@@ -3,7 +3,8 @@
 		<title>
 		RPG
 		</title>
-        <link rel="stylesheet" href="../../styles/style.css">
+        <link rel="stylesheet" href="../../styles/parent.css">
+
         <!--need to add game-->
 		<link rel="stylegame" href="Game/TemplateData/style.css">
 		<script src="Game/TemplateData/UnityProgress.js"></script>
@@ -17,19 +18,21 @@
 
 <body>
 <!--sidebannerimage-->
-<div class="LEFT">
+<div class="left">
 </div>
-<div class="RIGHT">
+<div class="right">
 </div>
 
-		<div class="TextSize">
+        <!--need make NAV scale like rest of elements-->
+		<div id="NavBar">
 		<!--NAV BAR+LOG IN-->
-		<ul>
-		<!--logo,,setingsymbol,,signin=use images-->
-			<li><a class="LogoNav" href="Game.php">RPG</a></li>
-			<li><a class="Profile" href="">account</a></li>
-			<li><a class="Sign" href="../account/logout.php">Logout</a></li>
-		</ul>
+		<ul id="Nav">
+        <!--logo,,setingsymbol,,signin=use images-->
+			<li><a id="gameNav" href="./Game.php">RPG</a></li>
+			<li><a id="accountNav" href="">account</a></li>
+			<li><a id="loginNav" href="../account/logout.php">Logout</a></li>
+        </ul>
+        </div>
 		
 	<!--GAME-->
 	<div id="unityContainer" style="left:20%; width: 60%; height: 70%; padding: 0px; 

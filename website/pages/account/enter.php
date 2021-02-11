@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../parent.css">
 </head>
 
 <div id="FormContainer" style="display:block;">
@@ -65,7 +65,7 @@ if ($stmt = $con->prepare("SELECT ID, Password FROM accounts WHERE Username = ?"
             $_SESSION["name"] = $_POST["Username"];
             $_SESSION["id"] = $ID;
 
-            header("Location: Index.php");
+            header("Location: ../index.php");
         } else {
             $stmt->close();
             exit("incorrect Username and/or Passwordno1");

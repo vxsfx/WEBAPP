@@ -29,7 +29,7 @@
 </div>
 
 
-<script src="./scripts/script.js"></script>
+<script src="../../scripts/script.js"></script>
 <script>
 	var form = new loginForm() 
 </script>

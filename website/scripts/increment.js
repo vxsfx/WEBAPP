@@ -41,6 +41,7 @@ class idlog{
         var ulEl;
         var inulEl;
         switch(true){
+          //CREATE case for image
           case /.\*..../.test(compline):
             //create new list element
             inulEl = null;
