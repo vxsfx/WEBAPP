@@ -6,3 +6,14 @@ TODO towards conclusion of project
     also go over anything unplanned, problems, changes and 
     things that could not be implemented, either due 
     to lack of knowledge, time or impossibility
+	
+	change mainlog links to links to github repo/versions
+
+TODO
+    with website functionality finished provide tests, fix bugs
+    plan next stages of project(game)
+        how might it interact to database or website
+        how might multiplayer function
+        implement interaction to database or site 
+
+        if time is left, implement multiplayer(LAN test) 
