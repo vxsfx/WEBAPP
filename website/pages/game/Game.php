@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <HTML>
 	<head>
 		<title>
@@ -6,23 +10,19 @@
         <link rel="stylesheet" href="../../styles/parent.css">
 
         <!--need to add game-->
-		<link rel="stylegame" href="Game/TemplateData/style.css">
-		<script src="Game/TemplateData/UnityProgress.js"></script>
-		<script src="Game/Build/UnityLoader.js"></script>
-		<script>
-			var unityInstance = UnityLoader.instantiate("unityContainer", "Game/Build/Game.json", 
-			{onProgress: UnityProgress});  
-  		</script>
+		<link rel="stylegame" href="../../../Game/WebGame/TemplateData/style.css">
     </head>
     
 
 <body>
+
 <!--sidebannerimage-->
+<!--
 <div class="left">
 </div>
 <div class="right">
 </div>
-
+-->
         <!--need make NAV scale like rest of elements-->
 		<div id="NavBar">
 		<!--NAV BAR+LOG IN-->
@@ -50,6 +50,22 @@
 			
 		</script>
 		</div>
+
+
+<script src="../../../Game/WebGame/TemplateData/UnityProgress.js"></script>
+<script src="../../../Game/WebGame/Build/UnityLoader.js"></script>
+<script src="../../scripts/nameLoader.js"></script>
+<script>
+    var unityInstance = UnityLoader.instantiate("unityContainer", "../../../Game/WebGame/Build/WebGame.json", 
+      {onProgress: UnityProgress});
+
+
+    setTimeout(() => {
+        nameToSend = "<?php echo $_SESSION['name']; ?>"
+        unityInstance.SendMessage("UserName", "DoThing", nameToSend);},5000);
+</script>
+
+
 
 
 </body>

@@ -1,18 +1,21 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
-public class getUserName : MonoBehaviour
+public class GetUserName : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public TextMeshPro mText;
+    public string user;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+
+    void DoThing(string userName) {
+        user = userName;
+        mText.text = user;
     }
 }
