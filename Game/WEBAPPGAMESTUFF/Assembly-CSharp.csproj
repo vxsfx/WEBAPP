@@ -63,9 +63,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CharacterClass.cs" />
     <Compile Include="Assets\GetUserName.cs" />
     <Compile Include="Assets\cameraFollow.cs" />
+    <Compile Include="Assets\enemyClass.cs" />
     <Compile Include="Assets\playerMovement.cs" />
+    <Compile Include="Assets\weaponClass.cs" />
     <None Include="Assets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
