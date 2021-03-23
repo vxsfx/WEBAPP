@@ -34,3 +34,8 @@ TODO Relook criteria(REMOVE ME WHEN DONE)
 
 
 CREATE tests for html/css(design errors), js(script errors), cs(scriptErrors), game(physics/animation errors), 
+
+
+TODO go over extensions in management doc
+
+TODO go over all decision (why use relative path instead of absolute), why use php, why use px, 
