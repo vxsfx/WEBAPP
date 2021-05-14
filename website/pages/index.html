@@ -21,7 +21,7 @@
 	<ul id="Nav">
 	<!--logo,,setingsymbol,,signin=use images-->
 		<li><a id="gameNav" onclick="form.Open()">RPG</a></li>
-		<li><a id="accountNav" onclick="form.Open()">account</a></li>
+		<li><a id="accountNav" onclick="form.Open()">account</a></li> <!--remove-->
 		<li><a id="loginNav" onclick="form.Open()">sign in</a></li>
 	</ul>
 </div>
@@ -62,21 +62,36 @@
 <div class="News">
 	<div class="Slide UpdateSlide">
 		<div class="infobox" style="left:6%;">
-			<a class="NewsText" id="1" href="./info/info.html#1">iframetestlink</a>
+			<a class="NewsText" id="1" href="./info/info.html#news1">1</a>
 		</div>
 		<div class="infobox" style="left:38%;">
-			<a class="NewsText" id="2" href="./info/info.html">456</a>
+			<a class="NewsText" id="2" href="./info/info.html#news2">2</a>
 		</div>
 		<div class="infobox" style="right:6%;">
-			<a class="NewsText" id="3" href="./info/info.html">789</a>
+			<a class="NewsText" id="3" href="./info/info.html#news3">3</a>
 		</div>		
 	</div>
-
 	<div class="Slide UpdateSlide">
-		<a class="NewsText" href="./info/info.html">B</a>
+		<div class="infobox" style="left:6%;">
+			<a class="NewsText" id="1" href="./info/info.html#news4">4</a>
+		</div>
+		<div class="infobox" style="left:38%;">
+			<a class="NewsText" id="2" href="./info/info.html#news5">5</a>
+		</div>
+		<div class="infobox" style="right:6%;">
+			<a class="NewsText" id="3" href="./info/info.html#news6">6</a>
+		</div>
 	</div>
 	<div class="Slide UpdateSlide">
-		<a class="NewsText" href="./info/info.html">C</a>
+		<div class="infobox" style="left:6%;">
+			<a class="NewsText" id="1" href="./info/info.html#news7">7</a>
+		</div>
+		<div class="infobox" style="left:38%;">
+			<a class="NewsText" id="2" href="./info/info.html#news8">8</a>
+		</div>
+		<div class="infobox" style="right:6%;">
+			<a class="NewsText" id="3" href="./info/info.html#news9">9</a>
+		</div>
 	</div>
 	<a class="Prev" style="left:1.5%;" onclick="upSlider.changeSlide(-1)">&#10094;</a>
 	<a class="Next" style="right:1.5%;"  onclick="upSlider.changeSlide(1)">&#10095;</a>
@@ -99,7 +114,8 @@
 </div>
 
 
-<script src="../scripts/script.js"></script>
+<script src="../scripts/slider.js"></script>
+<script src="../scripts/login.js"></script>
 <script>
 	var newSlider = new slider("NewsSlide")
 	var upSlider = new slider("UpdateSlide") 

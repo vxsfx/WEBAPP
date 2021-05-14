@@ -1,14 +1,37 @@
 <html>
     <body>
-        <div id="1">
+        <div id="news">
+
         </div>
-        <div id="2">
+        <div id="updates">
+
         </div>
 
-        <script src="./increment.js"></script>
-        <script>
-            const egg = new idlog()
-        </script>
 
     </body>
+
+    <script>
+
+    
+    
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        for (i in range(myObj.articles)){
+            document.appendChild()//header
+            document.appendChild()//content
+        }
+        
+        
+        //document.getElementById("news1").innerHTML = myObj.news1;
+    }
+    };
+    xmlhttp.open("GET", "test.json", true);
+    xmlhttp.send();
+
+        
+        console.log()
+    </script>
 </html>

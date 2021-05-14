@@ -1,0 +1,2 @@
+BUG
+multiplayer movement moves all players, player floats up on other player screen 

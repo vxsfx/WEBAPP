@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+echo($_SESSION["name"])
 ?>
 
 <HTML>
@@ -10,7 +12,7 @@ session_start();
         <link rel="stylesheet" href="../../styles/parent.css">
 
         <!--need to add game-->
-		<link rel="stylegame" href="../../../Game/WebGame/TemplateData/style.css">
+		<link rel="stylegame" href="../../../Game/WEBAPPGAME/TemplateData/style.css">
     </head>
     
 
@@ -52,17 +54,30 @@ session_start();
 		</div>
 
 
-<script src="../../../Game/WebGame/TemplateData/UnityProgress.js"></script>
-<script src="../../../Game/WebGame/Build/UnityLoader.js"></script>
-<script src="../../scripts/nameLoader.js"></script>
+<script src="../../../Game/WEBAPPGAME/TemplateData/UnityProgress.js"></script>
+<script src="../../../Game/WEBAPPGAME/Build/UnityLoader.js"></script>
+<script src="../../scripts/unitySender.js"></script>
 <script>
-    var unityInstance = UnityLoader.instantiate("unityContainer", "../../../Game/WebGame/Build/WebGame.json", 
-      {onProgress: UnityProgress});
 
+var unityInstance = new UnityLoader.instantiate("unityContainer", "../../../Game/WEBAPPGAME/Build/WEBAPPGAME.json", {onProgress: UnityProgress});
 
-    setTimeout(() => {
-        nameToSend = "<?php echo $_SESSION['name']; ?>"
-        unityInstance.SendMessage("UserName", "DoThing", nameToSend);},5000);
+    nameToSend = "<?php echo $_SESSION['name']; ?>"
+
+        //unconnected = true;
+        //while(unconnected){
+            try{
+                setTimeout(() => {
+                    unityInstance.SendMessage("Multiplayer", "loadPlayer", nameToSend);},6000);
+                    unconnected = false;
+                setTimeout(() => {
+                    unityInstance.SendMessage("Multiplayer", "setLocalPlayerName", nameToSend);},10000);
+                }
+            catch{
+                console.log("no player loaded")
+            }
+        //}
+        console.log("hereaaa")
+
 </script>
 
 

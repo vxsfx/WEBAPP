@@ -85,7 +85,8 @@ session_start();
 
 
 
-<script src="../scripts/script.js"></script>
+<script src="../scripts/slider.js"></script>
+<script src="../scripts/login.js"></script>
 <script>
 	var newSlider = new slider("NewsSlide")
 	var upSlider = new slider("UpdateSlide") 

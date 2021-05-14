@@ -1,0 +1,25 @@
+{   
+    "articles":3,
+    "news":[
+        {"header":"header1",
+        "content":"content1"},
+        
+        {"header":"header2",
+        "content":"content2"},
+        
+        {"header":"header3",
+        "content":"content3"}],
+
+    "updates":[
+        {"header":"Update 2",
+        "content":""},
+
+        {"header":"Update 1",
+        "content":""}
+    
+    
+    
+    
+    
+    ]
+}

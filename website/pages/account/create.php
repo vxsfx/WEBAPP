@@ -50,6 +50,9 @@
     if ( !isset($_POST["Username"], $_POST["Password"], $_POST["Email"], $_POST["DOB"])){
         exit("please fill all fields");
     }
+    if (!filter_var($_POST["Email"], FILTER_VALIDATE_EMAIL)){
+        exit("email invalid");
+    }
 
     if ($stmt = $con->prepare("SELECT Username, Email From accounts WHERE Username=?")){
         $stmt->bind_param("s", $_POST["Username"]);
@@ -60,21 +63,18 @@
             $stmt->close();
             exit("Username already taken");
         }
-        else{
-            //need to check email real//and DOB//and user length(of 20)
-            if ($stmt = $con->prepare("INSERT INTO accounts (Username, Password, Email, DOB) Values (?,?,?,?)")){
-                $password = password_hash($_POST['Password'], PASSWORD_DEFAULT);
-                $stmt->bind_param('ssss', $_POST['Username'], $password, $_POST['Email'], $_POST["DOB"]);
-                $stmt->execute();
-                exit("now login");
-            }
-            else{
-                exit("failed to prepare");
-            }
     }
-}
-else{
-    exit("failed to prepare");
-}
-
+    else{
+        exit("failed to validate new user");
+    }
+    //need to check email real[x]//and DOB[]//and user length(of 20)[]
+    if ($stmt = $con->prepare("INSERT INTO accounts (Username, Password, Email, DOB) Values (?,?,?,?)")){
+        $password = password_hash($_POST['Password'], PASSWORD_DEFAULT);
+        $stmt->bind_param('ssss', $_POST['Username'], $password, $_POST['Email'], $_POST["DOB"]);
+        $stmt->execute();
+        exit("now login");
+    }
+    else{
+        exit("failed to prepare");
+    }
 ?>

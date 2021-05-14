@@ -5,7 +5,7 @@ TODO create requirements research
 
 TODO towards conclusion of project
      create overview of 
-     orginise from management(include github version control, link to versions when neccessary), site designing, site requirements, site implementation, game design, game implementation, requirements site testing, game testing
+     orginise from Ideas, management(include github version control, link to versions when neccessary), site designing, site requirements, site implementation, game design, game implementation, requirements site testing, game testing
      			while going through evalutaions and checks and stuff
 
      
@@ -44,3 +44,5 @@ TODO go over all decision (why use relative path instead of absolute), why use p
 TODO organise TODOS
 
 TODO include links to where functions/methods stuff comes from as research (eg unity sendmessage)
+
+better gantt charts
