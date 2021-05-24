@@ -1,0 +1,53 @@
+<html>
+    <body>
+        <a href="test.json"><h2>ads</h2> <p>jkhsfdg</p></a>
+
+
+        <div id="news">
+
+        </div>
+        <div id="updates">
+
+        </div>
+
+
+    </body>
+
+    <script>
+
+    var news = document.getElementById("news")
+    var updates = document.getElementById("updates")
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        
+        var myObj = JSON.parse(this.responseText);
+        //number = console.log(typeof(myObj.articles))
+
+        //for info page
+        for (i of myObj.news){
+            //console.log(i)
+            console.log(i.header)
+            console.log(i.content)
+
+            var div = document.createElement("div")
+            
+            var header = document.createElement("h2")
+            header.appendChild(document.createTextNode(i.header))
+            div.appendChild(header)
+
+            var content = document.createElement("p")
+            content.appendChild(document.createTextNode(i.content))
+            div.appendChild(content)
+
+            div.className = "newsarticle"
+            news.appendChild(div)
+
+        }
+    }
+    };
+    xmlhttp.open("GET", "test.json", true);
+    xmlhttp.send();
+    </script>
+</html>

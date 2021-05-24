@@ -1,0 +1,27 @@
+{    
+    "news":[
+        {"header":"Minimap",
+        "content":"working on minimap for game"},
+        
+        {"header":"multiple characters",
+        "content":"worked on database designs to allow multiple characters for users"},
+        
+        {"header":"More Technical change",
+        "content":"database will be wiped of unused accounts, including inactive, and test"},
+            
+        {"header":"Technical change",
+        "content":"security issue, no ADMIN login for database connection"}
+            
+    ],
+
+    "updates":[
+        {"header":"Map",
+            "content":"Map chnages added, includes village, and mountain"},
+
+        {"header":"Multiplayer",
+        "content":"Multiplayer now working with proper animations and name display"},
+
+        {"header":"Users",
+        "content":"USer can now create acounts and login"}
+    ]
+}

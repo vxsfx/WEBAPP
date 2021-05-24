@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../styles/parent.css">
 </head>
 
 
@@ -29,9 +29,11 @@
 </div>
 
 
-<script src="../../scripts/script.js"></script>
+<script src="../../scripts/login.js"></script>
+<script src="../scripts/banner.js"></script>
 <script>
 	var form = new loginForm() 
+    var banners = new banner_select()    
 </script>
 
 </html>
@@ -54,7 +56,7 @@
         exit("email invalid");
     }
 
-    if ($stmt = $con->prepare("SELECT Username, Email From accounts WHERE Username=?")){
+    if ($stmt = $con->prepare("SELECT Username, Email From UserAccounts WHERE Username=?")){
         $stmt->bind_param("s", $_POST["Username"]);
         $stmt->execute();
         $stmt->store_result();
@@ -67,8 +69,8 @@
     else{
         exit("failed to validate new user");
     }
-    //need to check email real[x]//and DOB[]//and user length(of 20)[]
-    if ($stmt = $con->prepare("INSERT INTO accounts (Username, Password, Email, DOB) Values (?,?,?,?)")){
+    //TODO check email real[x]//and DOB[]//and user length(of 20)[]
+    if ($stmt = $con->prepare("INSERT INTO useraccounts (Username, Password, Email, DOB) Values (?,?,?,?)")){
         $password = password_hash($_POST['Password'], PASSWORD_DEFAULT);
         $stmt->bind_param('ssss', $_POST['Username'], $password, $_POST['Email'], $_POST["DOB"]);
         $stmt->execute();

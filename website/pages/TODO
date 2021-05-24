@@ -1,1 +1,5 @@
 prevent fullstops/ non alphanumeric characters in username
+
+CREATE php no-login prevention, stops users php without login
+
+if session[user]==null goto-> index.html

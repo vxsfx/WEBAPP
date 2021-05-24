@@ -1,7 +1,11 @@
 /*
 styles used by all/almost all pages(eg navbar, banners, maybe forms)
 */
-body{font-size:100%;}
+body{
+    font-size:100%;
+    background-color: rgb(39, 39, 39);    
+
+}
 
 #NavBar{
     z-index:1;
@@ -38,12 +42,15 @@ body{font-size:100%;}
             }
         #gameNav{
             position:absolute;
-            left: 0%;
+            left: 20%;
             font-size:4vw;
             top:0%;    
         }
         #homeNav{
-            display:block;
+            position: absolute;
+            left: 0%;
+            top: 0%;
+            font-size:4vw;
 }
 
 #FormContainer{
@@ -63,26 +70,26 @@ body{font-size:100%;}
     left:25%;
 }
 
-
-.left{
+/*CREATE BIASED randomisation script for banner images //COMPLETE*/
+#left{
     position:fixed;
     top:0%;
     left:0px;
     height:100%;
     width:20%;	
     background-color:red;
-    background-image: url("Trees.PNG");
+    /*background-image: url("Trees.PNG");*/
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-.right{
+#right{
     position:fixed;
     top:0%;
     right:0px;
     height:100%;
     width:20%;
     background-color:red;
-    background-image: url("Trees.PNG");
+    /*background-image: url("Trees.PNG");*/
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }

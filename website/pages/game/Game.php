@@ -18,18 +18,17 @@ echo($_SESSION["name"])
 
 <body>
 
-<!--sidebannerimage-->
-<!--
-<div class="left">
+<div id="left">
 </div>
-<div class="right">
+<div id="right">
 </div>
--->
-        <!--need make NAV scale like rest of elements-->
+
+        <!--TODO make NAV scale like rest of elements-->
 		<div id="NavBar">
 		<!--NAV BAR+LOG IN-->
 		<ul id="Nav">
-        <!--logo,,setingsymbol,,signin=use images-->
+        <!--CREATE logo,,setingsymbol,,signin=use images-->
+            <li><a id="homeNav" href="../index/index.php">Home</a></li>
 			<li><a id="gameNav" href="./Game.php">RPG</a></li>
 			<li><a id="accountNav" href="">account</a></li>
 			<li><a id="loginNav" href="../account/logout.php">Logout</a></li>
@@ -47,7 +46,7 @@ echo($_SESSION["name"])
 
 
 
-	<!--full screen script-->
+	<!--CREATE fullscreen script-->
 		<script>
 			
 		</script>
@@ -67,10 +66,10 @@ var unityInstance = new UnityLoader.instantiate("unityContainer", "../../../Game
         //while(unconnected){
             try{
                 setTimeout(() => {
-                    unityInstance.SendMessage("Multiplayer", "loadPlayer", nameToSend);},6000);
+                    unityInstance.SendMessage("Multiplayer", "loadPlayer", nameToSend);},8000);
                     unconnected = false;
                 setTimeout(() => {
-                    unityInstance.SendMessage("Multiplayer", "setLocalPlayerName", nameToSend);},10000);
+                    unityInstance.SendMessage("Multiplayer", "setLocalPlayerName", nameToSend);},12000);
                 }
             catch{
                 console.log("no player loaded")
@@ -79,8 +78,10 @@ var unityInstance = new UnityLoader.instantiate("unityContainer", "../../../Game
         console.log("hereaaa")
 
 </script>
-
-
+<script src="../../scripts/banner.js"></script>
+<script>
+    var banners = new banner_select()    
+</script>
 
 
 </body>

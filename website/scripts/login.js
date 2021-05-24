@@ -12,7 +12,7 @@ class loginForm{
       this.newform = document.getElementById("NewContainer");
     }
     catch{
-      consosle.log()
+      consosle.log("error")
     }
   };
 

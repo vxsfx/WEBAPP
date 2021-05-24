@@ -1,0 +1,177 @@
+body{font-size:100%;}	/*move to page*/
+	
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  display:block;	
+  }
+	
+li a{	
+	display: block;
+	text-align: center;
+	font-size: 50px;
+	background-color:gray;	
+}
+
+li a:hover {background-color:black;}
+
+	.Sign{position:absolute;
+	right: 20%;
+	font-size:4vw;
+	}
+	.LogoNav{position:absolute;
+	left: 20%;
+	font-size:4vw;
+	}
+	.Profile{position:absolute;
+	right: 35%;
+	font-size:4vw;
+	}
+
+.TextSize{
+	font-size:8vw; /*move to page*/
+}
+.LEFT{position:absolute;
+left:0px;
+height:100%;
+width:20%;	
+background-image: url("Trees.PNG");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+.RIGHT{position:absolute;
+right:0px;
+height:100%;
+width:20%;
+background-color:red;
+background-image: url("Trees.PNG");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+
+.Backdrop{
+margin-left:20%;
+margin-right:20%;
+height:30%;
+background-color:gray;
+padding:10px;
+margin-bottom:2%;
+}
+.Title{	display:block;
+	margin-left:25%;
+	margin-right:25%;
+	width:50%;
+	height:20%;
+	background-color:black;
+}
+.Play{
+	display:block;
+	margin-left:35%;
+	margin-right:35%;
+	width:30%;
+	height:20%;
+	background-color:black;
+}
+
+
+
+
+.Updates{	
+	display:block;
+	position: relative;
+	margin-left:25%;
+	width:50%;
+	height:20%;
+	background-color:blue;
+	overflow: hidden;
+	border-radius: 10%;
+}
+
+.Uptext{
+	text-align: center;
+	left:5%;
+	top:5%;
+	position: absolute;
+	}	
+.UpPrev, .UpNext{
+	cursor: pointer;
+    position: absolute;
+    top:40%;
+	width:auto;
+	background-color:rgba(140,140,140,0.2);
+	border-radius: 10%;
+	font-size: 175%;
+
+}
+.UpNext{ 
+	right:1.5%; /*move to page*/
+    }
+.UpPrev{
+    left:1.5%;	/*move to page*/
+    }
+.UpSlide{
+	display:none;
+	width:50%;
+	}
+
+.News{
+	display:block;
+	margin-left:25%;
+	margin-right:25%;
+	top:2.5%;
+	width:50%;
+	height:20%;
+	background-color:gray;
+	overflow: hidden;
+	position: relative;
+	border-radius: 10%;
+	}
+		
+.newtext{
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top:50%;
+	}		
+
+.Prev, .Next{
+	cursor: pointer;
+	position: absolute;
+    top:50%;
+	width:auto;
+	}    
+	
+.NewNext{ 
+	right:10%;
+    }			/*move to html/php*/
+.NewPrev{
+    left:10%;	/*also move*/
+    }
+.NewSlide{
+	display:none;
+	width:50%;
+	}
+.infobox{
+	background-color:rgb(0, 0, 0);
+	display: block;
+	position:absolute;
+	top:10%;
+	height:80%;
+	width:25%;
+	border-radius: 15%;
+}
+
+#FormContainer{
+	display:none;
+	background-color: aqua;
+	position: absolute;
+	left:25%;
+	width:50%;
+	height:10%;
+}
+#NewContainer{
+	display:none;
+	background-color: brown;
+	position: absolute;
+	left:25%;
+}

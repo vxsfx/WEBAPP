@@ -5,7 +5,7 @@
     margin-left:20%;
     margin-right:20%;
     height:30%;
-    background-color:gray;
+    background-image: url("../images/main.png");
     margin-top: 5%;
     }
     .Title{	
@@ -27,7 +27,12 @@
         background-color:black;
     }
 
-
+    .UpdateText{
+        text-align: center;
+        left:5%;
+        top:5%;
+        position: absolute;
+        }	
 .NewsText{
 	text-align: center;
 	left:5%;

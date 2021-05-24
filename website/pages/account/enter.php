@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>login</title>
-    <link rel="stylesheet" href="../../parent.css">
+    <link rel="stylesheet" href="../../styles/parent.css">
 </head>
 
 <div id="FormContainer" style="display:block;">
@@ -27,9 +27,11 @@
 </div>
 
 
-<script src="./scripts/script.js"></script>
+<script src="../../scripts/login.js"></script>
+<script src="../../scripts/banner.js"></script>
 <script>
 	var form = new loginForm() 
+    //var banners = new banner_select()    
 </script>
 
 </html>
@@ -49,23 +51,22 @@ if ( !isset($_POST["Username"], $_POST["Password"])){
     exit("please fill both fields");
 }
 
-if ($stmt = $con->prepare("SELECT ID, Password FROM accounts WHERE Username = ?")){
+if ($stmt = $con->prepare("SELECT Password FROM useraccounts WHERE Username = ?")){
     $stmt->bind_param("s", $_POST["Username"]);
     $stmt->execute();
     $stmt->store_result();
     
     if ($stmt->num_rows > 0){
-        $stmt->bind_result($ID, $Password);
+        $stmt->bind_result( $Password);
         $stmt->fetch();
-        //needs password made with hash
+
         if (password_verify($_POST['Password'], $Password)){
         //if ($_POST["Password"]===$Password){
             session_regenerate_id();
             $_SESSION["loggedin"] = TRUE;
             $_SESSION["name"] = $_POST["Username"];
-            $_SESSION["id"] = $ID;
 
-            header("Location: ../index.php");
+            header("Location: ../index/index.php");
         } else {
             $stmt->close();
             exit("incorrect Username and/or Passwordno1");
