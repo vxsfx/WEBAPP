@@ -26,7 +26,6 @@ session_start();
         <!--logo,,setingsymbol,,signin=use images-->
             <li><a id="homeNav" href="./index.php">Home</a></li>
             <li><a id="gameNav" href="../game/Game.php">RPG</a></li>
-			<li><a id="accountNav" href="">account</a></li>
 			<li><a id="loginNav" href="../account/logout.php">Logout</a></li>
         </ul>
         </div>

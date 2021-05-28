@@ -1,32 +1,4 @@
 
-.Backdrop{
-    z-index:-3;
-    position: relative;
-    margin-left:20%;
-    margin-right:20%;
-    height:30%;
-    background-image: url("../images/main.png");
-    margin-top: 5%;
-    }
-    .Title{	
-        z-index: -2;
-        display:block;
-        margin-left:25%;
-        margin-right:25%;
-        width:50%;
-        height:20%;
-        background-color:black;
-    }
-    .Play{
-        z-index: -1;
-        display:block;
-        margin-left:35%;
-        margin-right:35%;
-        width:30%;
-        height:20%;
-        background-color:black;
-    }
-
     .UpdateText{
         text-align: center;
         left:5%;
@@ -87,3 +59,33 @@
 	width:25%;
 	border-radius: 15%;
 }
+
+
+.Backdrop{
+    z-index:-3;
+    position: relative;
+    margin-left:22%;
+    margin-right:22%;
+    height:30%;
+    background-image: url("../pages/images/main.png");
+    /*background-image: url("/website/pages/images/main.png");*/
+    margin-top: 5%;
+    }
+    .Title{	
+        z-index: -2;
+        display:block;
+        margin-left:25%;
+        margin-right:25%;
+        width:50%;
+        height:20%;
+        background-color:black;
+    }
+    .Play{
+        z-index: -1;
+        display:block;
+        margin-left:35%;
+        margin-right:35%;
+        width:30%;
+        height:20%;
+        background-color:black;
+    }

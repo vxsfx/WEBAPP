@@ -30,7 +30,6 @@ echo($_SESSION["name"])
         <!--CREATE logo,,setingsymbol,,signin=use images-->
             <li><a id="homeNav" href="../index/index.php">Home</a></li>
 			<li><a id="gameNav" href="./Game.php">RPG</a></li>
-			<li><a id="accountNav" href="">account</a></li>
 			<li><a id="loginNav" href="../account/logout.php">Logout</a></li>
         </ul>
         </div>
@@ -73,6 +72,7 @@ var unityInstance = new UnityLoader.instantiate("unityContainer", "../../../Game
                 }
             catch{
                 console.log("no player loaded")
+                alert("no player has loaded, please refresh")
             }
         //}
         console.log("hereaaa")

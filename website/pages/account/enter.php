@@ -10,7 +10,6 @@
 		Password: <input type="text" name="Password" required><br>
 		<input type="submit"/>
 	</form>
-	<a onclick="form.Close()"><input type="button" value="cancel"></a>
 	<a onclick="form.NewUser()"><input type="button" value="signup"></a>
 </div>
 
@@ -21,7 +20,6 @@
 		Password: <input type="text" name="Password" required><br>
 		Date Of Birth<input type="date" name="DOB" required><br>
 		<input type="submit">
-		<a onclick="form.Close()"><input type="button" value="cancel"></a>
 		<a onclick="form.Open()"><input type="button" value="login"></a>
 	</form>
 </div>
